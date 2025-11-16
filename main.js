@@ -24,7 +24,6 @@ buttons.forEach((btn) => {
 
 submitBtn.addEventListener("click", () => {
 	if (!hasClicked) return;
-	hasClicked = true;
 	rateNumber.textContent = buttonValue;
 	ratingContainer.classList.add("hidden");
 	thankYouContainer.classList.remove("hidden");
