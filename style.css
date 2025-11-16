@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+/* || RESET */
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+img {
+	display: block;
+}
+button {
+	font: inherit;
+	border: none;
+	cursor: pointer;
+	outline: none;
+}
+html {
+	scroll-behavior: smooth;
+}
+/* || VARIABLES */
+:root {
+	/* COLORS */
+	/* HSL-PRI-COLOR */
+	--HSL-PRI-ORANGE: 25, 97%, 53%;
+
+	/* HSL-NEU-COLORS */
+	--HSL-NEU-WHITE: 0, 100%, 100%;
+	--HSL-NEU-GRAY500: 217, 12%, 63%;
+	--HSL-NEU-GRAY900: 213, 19%, 18%;
+	--HSL-NEU-GRAY950: 216, 12%, 8%;
+	--HSL-NEU-BLACK: 0, 0%, 0%;
+	--GRADIENT: radial-gradient(#232a34 0%, #181e27 100%);
+
+	/* PRI-COLOR */
+	--PRI-ORANGE: hsl(25, 97%, 53%);
+
+	/* NEU-COLORS */
+	--NEU-WHITE: hsl(0, 100%, 100%);
+	--NEU-GRAY500: hsl(217, 12%, 63%);
+	--NEU-GRAY900: hsl(213, 19%, 18%);
+	--NEU-GRAY950: hsl(216, 12%, 8%);
+	--NEU-BLACK: hsl(0, 0%, 0%);
+
+	/* FONTS */
+	--FF: "Overpass", sans-serif;
+	/* FONT-SIZES */
+	--FS-400: 1.125rem;
+	--FS-500: 1.25rem;
+	--FS-600: 1.5rem;
+	--FS-700: 1.75rem;
+	--FS-800: 2rem;
+	--FS-900: 5rem;
+	/* FONTS-WEIGHTS */
+	--FW-REGULAR: 500;
+	--FW-BOLD: 700;
+	--FW-BLACK: 800;
+
+	/* SPACING */
+	--space8: 0.5rem;
+	--space16: 1rem;
+	--space20: 1.25rem;
+	--space24: 1.5rem;
+	--space28: 1.75rem;
+	--space30: 1.875rem;
+	--space32: 2rem;
+	--space40: 2.5rem;
+	--space48: 3rem;
+}
+/* || GENERAL */
+body {
+	display: flex;
+	background-color: var(--NEU-GRAY950);
+	justify-content: center;
+	align-items: center;
+	flex-flow: column nowrap;
+	min-height: 100vh;
+}
+.container {
+	display: flex;
+	font-family: var(--FF);
+	flex-flow: column nowrap;
+	align-items: stretch;
+	background-image: var(--GRADIENT);
+	border-radius: var(--space30);
+	padding: var(--space32) var(--space24);
+	margin-inline: var(--space16);
+	max-width: 412px;
+}
+.rating-container,
+.thank-you-container {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: var(--space24);
+	transition: 0.5s opacity ease-in-out, 0.5s transform ease-in-out;
+}
+.rating-container {
+	opacity: 1;
+	transform: scale(1);
+}
+.thank-you-container {
+	opacity: 1;
+	transform: scale(1);
+}
+.rating-icon-container {
+	width: var(--space48);
+	height: var(--space48);
+	background-color: var(--NEU-GRAY900);
+	padding: var(--space16);
+	border-radius: var(--space24);
+}
+.rating-content-buttons-container {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: var(--space24);
+}
+.rating-content-container {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: var(--space16);
+}
+.rating-title,
+.thank-you-title {
+	font-size: var(--FS-700);
+	color: var(--NEU-WHITE);
+	font-weight: var(--FW-BOLD);
+}
+.rating-description,
+.button-rate,
+.thank-you-description {
+	color: var(--NEU-GRAY500);
+}
+.rating-description {
+	line-height: 1.4;
+}
+.rating-buttons {
+	display: flex;
+	justify-content: space-between;
+}
+.button-rate {
+	border-radius: 1.594rem;
+	background-color: var(--NEU-GRAY900);
+	font-size: var(--space16);
+	text-align: center;
+	font-weight: var(--FW-BOLD);
+	width: 3.188rem;
+	height: 3.188rem;
+	transition: 0.3s background-color ease-in-out;
+}
+.button-rate:hover,
+.submit-rate-button:hover {
+	background-color: var(--NEU-WHITE);
+	color: var(--NEU-BLACK);
+}
+.button-rate.selected {
+	background-color: var(--PRI-ORANGE);
+}
+.submit-rate-button {
+	width: 100%;
+	padding-block: 0.8rem;
+	background-color: var(--PRI-ORANGE);
+	border-radius: 1.406rem;
+	font-size: 0.875rem;
+	letter-spacing: 0.2rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	transition: 0.3s background-color ease-in-out;
+	color: var(--NEU-GRAY950);
+}
+
+.thank-you-content-container {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	gap: var(--space16);
+}
+.thank-you-image-description-container {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	gap: var(--space24);
+}
+.thank-you-description {
+	font-size: var(--space16);
+	line-height: 1.5;
+}
+.number-of-rate-container {
+	padding: 0.375rem var(--space16);
+	background-color: var(--NEU-GRAY900);
+	color: hsl(var(--HSL-PRI-ORANGE), 0.7);
+	border-radius: 1.406rem;
+	word-spacing: 0.01rem;
+}
+.hidden {
+	display: none;
+	opacity: 0;
+}
+@media screen and (min-width: 64.063rem) {
+	.container {
+		margin-inline: 0;
+	}
+	.rating-description {
+		line-height: 1.4;
+	}
+	.rating-content-buttons-container {
+		gap: var(--space16);
+	}
+	.rating-container,
+	.thank-you-container {
+		gap: var(--space32);
+	}
+	.submit-rate-button {
+		padding-block: 0.5rem;
+	}
+}

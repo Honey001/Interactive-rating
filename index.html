@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png" />
+		<link
+			rel="stylesheet"
+			href="./style.css" />
+		<script
+			src="./main.js"
+			defer></script>
+		<title>Frontend Mentor | Interactive rating component</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Rating state start -->
+		<main class="container">
+			<section class="rating-container">
+				<figure class="rating-icon-container">
+					<img
+						src="./images/icon-star.svg"
+						alt="icon-star" />
+				</figure>
+				<div class="rating-content-buttons-container">
+					<div class="rating-content-container">
+						<h1 class="rating-title">How did we do?</h1>
+						<p class="rating-description">
+							Please let us know how we did with your support
+							request. All feedback is appreciated to help us
+							improve our offering!
+						</p>
+					</div>
+					<div class="rating-buttons">
+						<button
+							class="button-rate"
+							type="button"
+							value="1">
+							1
+						</button>
+						<button
+							class="button-rate"
+							type="button"
+							value="2">
+							2
+						</button>
+						<button
+							class="button-rate"
+							type="button"
+							value="3">
+							3
+						</button>
+						<button
+							class="button-rate"
+							type="button"
+							value="4">
+							4
+						</button>
+						<button
+							class="button-rate"
+							type="button"
+							value="5">
+							5
+						</button>
+					</div>
+				</div>
+				<button
+					class="submit-rate-button"
+					id="submitBtn"
+					type="submit">
+					Submit
+				</button>
+			</section>
+			<!-- Rating state end -->
+
+			<!-- Thank you state start -->
+			<section class="thank-you-container hidden">
+				<div class="thank-you-image-description-container">
+					<img
+						src="./images/illustration-thank-you.svg"
+						alt="illustration-thank-you" />
+					<div class="number-of-rate-container">
+						<p class="number-of-rate">
+							You selected <span class="rate-number"></span> out
+							of 5
+						</p>
+					</div>
+				</div>
+				<div class="thank-you-content-container">
+					<h2 class="thank-you-title">Thank you!</h2>
+					<p class="thank-you-description">
+						We appreciate you taking the time to give a rating. If
+						you ever need more support, don’t hesitate to get in
+						touch!
+					</p>
+				</div>
+			</section>
+			<!-- Thank you state end -->
+		</main>
+
+		<div class="attribution">
+			Challenge by
+			<a
+				href="https://www.frontendmentor.io?ref=challenge"
+				target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Your Name Here</a>.
+		</div>
+	</body>
+</html>
