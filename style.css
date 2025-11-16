@@ -148,8 +148,8 @@ body {
 	height: 3.188rem;
 	transition: 0.3s background-color ease-in-out;
 }
-.button-rate:hover,
-.submit-rate-button:hover {
+.button-rate:active,
+.submit-rate-button:active {
 	background-color: var(--NEU-WHITE);
 	color: var(--NEU-BLACK);
 }
@@ -216,5 +216,10 @@ body {
 	}
 	.submit-rate-button {
 		padding-block: 0.5rem;
+	}
+	.button-rate:hover,
+	.submit-rate-button:hover {
+		background-color: var(--NEU-WHITE);
+		color: var(--NEU-BLACK);
 	}
 }
